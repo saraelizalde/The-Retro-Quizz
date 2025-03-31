@@ -1,0 +1,62 @@
+
+
+
+
+/* Start the Quizz area */
+
+.start-area{
+    background-image: url(../images/placeholder-image.webp) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25%;
+    padding-bottom: 25%;
+    /*border: 1px solid black;*/
+}
+
+.start-button{
+   height: 2rem;
+}
+
+.start-button:hover{
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+/* Navbar */
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: peru;
+    padding: 0.5rem;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links a:hover{
+    font-weight: bold;
+}
