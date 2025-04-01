@@ -10,12 +10,12 @@
 </head>
 
 <body>
-<!--Start Area-->
+    <!--Start Area-->
     <div class="start-area">
         <button class="start-button">Start the quizz</button>
     </div>
 
-<!--Navbar-->
+    <!--Navbar-->
     <nav class="navbar">
         <div class="nav-links">
             <a href="#game-area">Let's Play !</a>
@@ -24,37 +24,65 @@
         </div>
     </nav>
 
-<!--Game Area-->
-    <div class="game-area"> 
-        <div>
-            <p>Where the game is</p>
+    <!--Game Area-->
+    <h1>The Retro Quizz</h1>
+    <div class="game-area">
+        <div class="game-window">
+            <h2>What do you know ?</h2>
+            <div id="question">Question</div>
+            <div id="answers">
+                <button data-type="answerA" id="answer-a">Answer A</button>
+                <button data-type="answerB" id="answer-b">Answer B</button>
+                <button data-type="answerC" id="answer-c">Answer C</button>
+                <button data-type="answerD" id="answer-d">Answer D</button>
+            </div>
         </div>
-        <div>
-            <p>Keeping the score</p>
-        </div>       
+        <div class="score-area">
+            <p>Your score is : <span id="score">0</span></p>
+        </div>
     </div>
 
-<!--Game Rules-->
+    <!--Game Rules-->
+    
     <div class="game-rules">
-        <div>
-            <p>Text explaining the game</p>
-        </div>
-        <div>
-            <ul>
-                <li>Rule</li>
-                <li>Rule</li>
-                <li>Rule</li>
-            </ul>
-        </div>       
+        <h2>The Rules</h2>
+            <div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eos saepe deleniti alias veritatis
+                    asperiores error, perferendis consequatur earum! Accusantium suscipit deserunt eaque quae harum
+                    asperiores mollitia, tenetur consequatur at!</p>
+            </div>
+            <div>
+                <ul>
+                    <li>Rule</li>
+                    <li>Rule</li>
+                    <li>Rule</li>
+                </ul>
+            </div>
     </div>
 
-<!--Footer-->
-    <footer class="about-us">
-        <div>
-            <p>About us:</p>
+    <!--About us-->
+    <div class="about-us">
+        <h2>About us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ducimus, quam harum blanditiis totam laborum voluptates eum aperiam accusamus beatae porro! Laboriosam impedit quibusdam enim error ullam consequatur maiores sed?</p>
+    </div>
+
+
+
+    <!--Footer-->
+    <footer>
+        <div class="contact-us">
+           <h2>Contact us :</h2>
+           <p> email adress</p>
+        </div>
+        <div class="follow-us">
+            <h2>Follow us :</h2>
+            <p> links</p>
         </div>
     </footer>
 
+
+
+    <!--JavaScript-->
     <script src="assets/js/script.js"></script>
 </body>
 

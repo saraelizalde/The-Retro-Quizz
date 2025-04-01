@@ -1,11 +1,19 @@
 
+/*Global styling*/
+h1, h2{
+    text-align:center;
+}
+
+
+
+
 
 
 
 /* Start the Quizz area */
 
-.start-area{
-    background-image: url(../images/placeholder-image.webp) ;
+.start-area {
+    background-image: url(../images/placeholder-image.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,11 +27,11 @@
     /*border: 1px solid black;*/
 }
 
-.start-button{
-   height: 2rem;
+.start-button {
+    height: 2rem;
 }
 
-.start-button:hover{
+.start-button:hover {
     font-weight: bold;
     border: 2px solid black;
 }
@@ -38,7 +46,7 @@
 
 /* Navbar */
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -46,17 +54,163 @@
     padding: 0.5rem;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
 }
 
-.nav-links a{
+.nav-links a {
     text-decoration: none;
     color: black;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
     font-weight: bold;
 }
+
+
+
+
+
+
+/*Game Area*/
+
+.game-area {}
+
+.game-window {
+    background-color: green;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20% 0;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#answers {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+#question {
+    margin-bottom: 4rem;
+}
+
+.score-area {
+    background-color: pink;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+
+
+
+
+
+
+/*Game Rules*/
+
+.game-rules {
+    background-color: blue;
+    height: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+    flex-direction: column;
+}
+
+.game-rules h2{
+    margin-bottom: 0;
+}
+
+.game-rules div {
+    text-align: center;
+    padding: 0.5rem 1rem;
+}
+
+.game-rules div ul {
+    text-align: left;
+}
+
+
+
+
+/*About us*/
+.about-us{
+    background-color:darkmagenta;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.about-us h2{
+    padding: 1rem 0 0;
+}
+
+.about-us p{
+    text-align: center;
+    padding: 0 2rem 2rem;
+}
+
+
+
+
+
+
+
+
+/*Footer*/
+footer {
+    background-color: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem 0; 
+}
+
+footer .contact-us, footer .follow-us {
+    text-align: center; 
+    padding: 1rem;
+    width: 45%; 
+}
+
+
+
+
+
+
+
+
+/* Media Query <= 600px footer*/
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer .contact-us, footer .follow-us {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
