@@ -86,7 +86,7 @@ body{
 
 .nav-links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
     font-family: var(--secondary-font);
 }
@@ -94,6 +94,7 @@ body{
 .nav-links a {
     text-decoration: none;
     color: black;
+    font-size: x-large ;
 }
 
 .nav-links a:hover {
@@ -244,6 +245,16 @@ footer p, a{
     font-family: var(--primary-font);
 }
 
+footer a{
+    color: var(--deep-black);
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: var(--deep-black);
+    font-weight: bold;
+}
+
 
 
 
@@ -260,6 +271,27 @@ footer p, a{
 
     footer .contact-us, footer .follow-us {
         width: 100%;
+    }
+}
+
+/* Media Query <= 670px Navbar*/
+@media (max-width: 670px) {
+    .nav-links a{
+        font-size: medium ;
+    }
+}
+
+/* Media Query <= 550px Navbar*/
+@media (max-width: 550px) {
+    .nav-links a{
+        font-size: small;
+    }
+}
+
+/* Media Query <= 350px Navbar*/
+@media (max-width: 350px) {
+    .nav-links a{
+        font-size: x-small;
     }
 }
 
