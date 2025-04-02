@@ -54,16 +54,17 @@ body{
     /*border: 1px solid black;*/
 }
 
-.start-button {
+#start-button {
     height: 3rem;
     width:auto;
     font-family: var(--secondary-font);
     background-color: white;
+    border: 4px solid var(--hot-pink);
 }
 
-.start-button:hover {
+#start-button:hover {
     font-weight: bold;
-    border: 2px solid black;
+    border: 4px solid var(--electric-blue);
 }
 
 
