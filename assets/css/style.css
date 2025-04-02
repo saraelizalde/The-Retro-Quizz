@@ -1,7 +1,34 @@
 
+/*Google fonts import*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+/*CSS Variables*/
+
+:root{
+    --hot-pink: #FF41B4;
+    --electric-blue: #3A58FF;
+    --neon-purple: #A309DC;
+    --bright-yellow: #FFEB3B;
+    --deep-black: #000000;
+    --light-black: #212121;
+    --primary-font: 'Rubik', sans-serif;
+    --secondary-font: "Press Start 2P", system-ui;
+}
+
+
+
+
 /*Global styling*/
+
 h1, h2{
     text-align:center;
+    font-family: var(--secondary-font);
+}
+
+body{
+    background-color: var(--light-black);
+    font-size:large;
 }
 
 
@@ -13,10 +40,10 @@ h1, h2{
 /* Start the Quizz area */
 
 .start-area {
-    background-image: url(../images/placeholder-image.webp);
-    background-size: cover;
+    background-image: url(../images/retro-menu.png);
+    background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     height: 100%;
     width: 100%;
     display: flex;
@@ -28,7 +55,10 @@ h1, h2{
 }
 
 .start-button {
-    height: 2rem;
+    height: 3rem;
+    width:auto;
+    font-family: var(--secondary-font);
+    background-color: white;
 }
 
 .start-button:hover {
@@ -50,7 +80,7 @@ h1, h2{
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: peru;
+    background-color: var(--bright-yellow);
     padding: 0.5rem;
 }
 
@@ -58,6 +88,7 @@ h1, h2{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    font-family: var(--secondary-font);
 }
 
 .nav-links a {
@@ -76,10 +107,13 @@ h1, h2{
 
 /*Game Area*/
 
-.game-area {}
+.game-area h1{
+    color: var(--hot-pink);
+}
 
 .game-window {
-    background-color: green;
+    background-color: var(--deep-black);
+    color: var(--bright-yellow);
     height: 90%;
     width: 90%;
     display: flex;
@@ -100,18 +134,30 @@ h1, h2{
     justify-content: center;
 }
 
+#answers button{
+    background-color: var(--bright-yellow);
+    color: var(--deep-black);
+    font-family: var(--primary-font);
+    font-size: xx-large;
+}
+
 #question {
     margin-bottom: 4rem;
+    color: var(--bright-yellow);
+    font-family: var(--secondary-font);
 }
 
 .score-area {
-    background-color: pink;
+    background-color: var(--deep-black);
+    color: var(--electric-blue);
     height: 90%;
     width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
+    font-family: var(--secondary-font);
+    font-size: medium;
 }
 
 
@@ -123,7 +169,8 @@ h1, h2{
 /*Game Rules*/
 
 .game-rules {
-    background-color: blue;
+    background-color: var(--deep-black);
+    color: var(--hot-pink);
     height: auto;
     width: 90%;
     display: flex;
@@ -132,6 +179,7 @@ h1, h2{
     margin: auto;
     margin-top: 2rem;
     flex-direction: column;
+    font-family: var(--primary-font);
 }
 
 .game-rules h2{
@@ -152,7 +200,8 @@ h1, h2{
 
 /*About us*/
 .about-us{
-    background-color:darkmagenta;
+    background-color:var(--deep-black);
+    color: var(--neon-purple);
     width: 90%;
     margin: 2rem auto;
 }
@@ -164,6 +213,7 @@ h1, h2{
 .about-us p{
     text-align: center;
     padding: 0 2rem 2rem;
+    font-family: var(--primary-font);
 }
 
 
@@ -175,7 +225,7 @@ h1, h2{
 
 /*Footer*/
 footer {
-    background-color: red;
+    background-color: var(--bright-yellow);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -188,6 +238,10 @@ footer .contact-us, footer .follow-us {
     text-align: center; 
     padding: 1rem;
     width: 45%; 
+}
+
+footer p, a{
+    font-family: var(--primary-font);
 }
 
 
