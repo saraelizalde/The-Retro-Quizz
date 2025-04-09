@@ -4,7 +4,57 @@ let scoreValue = 0;
 let questions = [
     { question: "What is ?", answer: ".", wrongAnswer: 'nope' },
     { question: "Who is ?", answer: "..", wrongAnswer: 'no' },
-    { question: "When is?", answer: "...", wrongAnswer: 'nah' }
+    { question: "When is?", answer: "...", wrongAnswer: 'nah' },
+    {
+        question: "What was the first Mario game?",
+        answer: "Donkey Kong",
+        wrongAnswer: "Super Mario Bros."
+    },
+    {
+        question: "Who designed the world of 'Elden Ring'?",
+        answer: "George R.R. Martin",
+        wrongAnswer: "Hidetaka Miyazaki"
+    },
+    {
+        question: "Who developed Pac-Man?",
+        answer: "Namco",
+        wrongAnswer: "Atari"
+    },
+    {
+        question: "What game won the title of 'Game of the Year' at The Game Awards 2010?",
+        answer: "Red Dead Redemption",
+        wrongAnswer: "Halo: Reach"
+    },
+    {
+        question: "What year was the first video game console released?",
+        answer: "1972",
+        wrongAnswer: "1980"
+    },
+    {
+        question: "What year did 'The Last of Us' first release?",
+        answer: "2013",
+        wrongAnswer: "2015"
+    },
+    {
+        question: "What programming language was created by Dennis Ritchie?",
+        answer: "C",
+        wrongAnswer: "Python"
+    },
+    {
+        question: "What game introduced the character 'Aloy' in 2017?",
+        answer: "Horizon Zero Dawn",
+        wrongAnswer: "The Witcher 3"
+    },
+    {
+        question: "Who is known as the father of modern computing?",
+        answer: "Alan Turing",
+        wrongAnswer: "Charles Babbage"
+    },
+    {
+        question: "What year was the first iPhone released?",
+        answer: "2007",
+        wrongAnswer: "2010"
+    }
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -83,7 +133,7 @@ function startTheQuestions() {
             //alert("Correct!");
         } else {
             scoreValue = 0;
-            // alert("Wrong! Score reset to 0");
+            alert("Wrong! Score reset to 0");
         }
 
         //Add 1 to the score display
