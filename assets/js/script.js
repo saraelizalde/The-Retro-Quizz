@@ -29,12 +29,18 @@ function startTheQuizz() {
 }
 
 
-function startTheQuestions(){
+function startTheQuestions() {
 
     //Get the containers
     let container = document.getElementById("game-window");
     let containerAnswer = document.getElementById('answers');
-    
+
+    // End condition
+    if (score >= 2) {
+        question.textContent = "You won";
+        return;
+    }
+
     //Shows first question
     let questionElement = document.getElementById("question");
     questionElement.textContent = questions[currentQuestion].question;
@@ -69,14 +75,21 @@ function startTheQuestions(){
         let correct = questions[currentQuestion].answer;
         if (selected === correct) {
             score += 1;
-            alert("Correct!");
+            //alert("Correct!");
         } else {
             score = 0;
-            alert("Wrong! Score reset to 0");
+           // alert("Wrong! Score reset to 0");
         }
+
+        //Next question, remove buttons to start function again
+    currentQuestion++;
+    containerAnswer.removeChild(buttonA);
+    containerAnswer.removeChild(buttonB);
+    startTheQuestions();
     }
 
     //Event Listeners
     buttonA.addEventListener("click", handleAnswerClick);
     buttonB.addEventListener("click", handleAnswerClick);
+
 }
