@@ -41,6 +41,11 @@ function startTheQuestions() {
         return;
     }
 
+    // Start questions again if none left in the array
+    if (currentQuestion >= questions.length) {
+        currentQuestion = 0;
+    }
+
     //Shows first question
     let questionElement = document.getElementById("question");
     questionElement.textContent = questions[currentQuestion].question;
