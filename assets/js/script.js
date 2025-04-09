@@ -1,5 +1,6 @@
 let currentQuestion = 0;
-let answer = 0;
+let score = document.getElementById('score');
+score = 0;
 let questions = [
     { question: "What is ?", answer: ".", wrongAnswer: 'nope' },
     { question: "What is ?", answer: "..", wrongAnswer: 'no' },
@@ -14,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function startTheQuizz() {
-
     //Get the containers
     let container = document.getElementById("game-window");
     let containerAnswer = document.getElementById('answers');
@@ -25,6 +25,16 @@ function startTheQuizz() {
     let startButton = document.getElementById('start-game');
     containerAnswer.removeChild(startButton);
 
+    startTheQuestions();
+}
+
+
+function startTheQuestions(){
+
+    //Get the containers
+    let container = document.getElementById("game-window");
+    let containerAnswer = document.getElementById('answers');
+    
     //Shows first question
     let questionElement = document.getElementById("question");
     questionElement.textContent = questions[currentQuestion].question;
@@ -58,14 +68,13 @@ function startTheQuizz() {
         let selected = e.target.textContent;
         let correct = questions[currentQuestion].answer;
         if (selected === correct) {
-            // add score += 1;
+            score += 1;
             alert("Correct!");
         } else {
-            // go back score = 0;
+            score = 0;
             alert("Wrong! Score reset to 0");
         }
     }
-
 
     //Event Listeners
     buttonA.addEventListener("click", handleAnswerClick);
