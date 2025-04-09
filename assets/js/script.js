@@ -1,10 +1,10 @@
 let currentQuestion = 0;
-let score = document.getElementById('score');
-score = 0;
+let scoreDisplay = document.getElementById('score');
+let scoreValue = 0;
 let questions = [
     { question: "What is ?", answer: ".", wrongAnswer: 'nope' },
-    { question: "What is ?", answer: "..", wrongAnswer: 'no' },
-    { question: "What is?", answer: "...", wrongAnswer: 'nah' }
+    { question: "Who is ?", answer: "..", wrongAnswer: 'no' },
+    { question: "When is?", answer: "...", wrongAnswer: 'nah' }
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -36,7 +36,7 @@ function startTheQuestions() {
     let containerAnswer = document.getElementById('answers');
 
     // End condition
-    if (score >= 2) {
+    if (scoreValue >= 2) {
         question.textContent = "You won";
         return;
     }
@@ -74,18 +74,23 @@ function startTheQuestions() {
         let selected = e.target.textContent;
         let correct = questions[currentQuestion].answer;
         if (selected === correct) {
-            score += 1;
+            scoreValue += 1;
             //alert("Correct!");
         } else {
-            score = 0;
-           // alert("Wrong! Score reset to 0");
+            scoreValue = 0;
+            // alert("Wrong! Score reset to 0");
         }
 
+        //Add 1 to the score display
+        scoreDisplay.textContent = scoreValue;
+
         //Next question, remove buttons to start function again
-    currentQuestion++;
-    containerAnswer.removeChild(buttonA);
-    containerAnswer.removeChild(buttonB);
-    startTheQuestions();
+        currentQuestion++;
+        containerAnswer.removeChild(buttonA);
+        containerAnswer.removeChild(buttonB);
+
+        //Starts function again
+        startTheQuestions();
     }
 
     //Event Listeners
