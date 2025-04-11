@@ -1,10 +1,7 @@
-let currentQuestion = 0;
+
 let scoreDisplay = document.getElementById('score');
 let scoreValue = 0;
 let questions = [
-    { question: "What is ?", answer: ".", wrongAnswer: 'nope' },
-    { question: "Who is ?", answer: "..", wrongAnswer: 'no' },
-    { question: "When is?", answer: "...", wrongAnswer: 'nah' },
     {
         question: "What was Mario's first appearance in a game?",
         answer: "Donkey Kong",
@@ -21,9 +18,19 @@ let questions = [
         wrongAnswer: "Atari"
     },
     {
+        question: "What year was the Xbox 360 released?",
+        answer: "2005",
+        wrongAnswer: "2006"
+    },
+    {
         question: "What game won the title of 'Game of the Year' at The Game Awards 2010?",
         answer: "Red Dead Redemption",
         wrongAnswer: "Halo: Reach"
+    },
+    {
+        question: "Which company originally manufactured the Game Boy?",
+        answer: "Nintendo",
+        wrongAnswer: "Sega"
     },
     {
         question: "What year was the first video game console released?",
@@ -41,6 +48,11 @@ let questions = [
         wrongAnswer: "Python"
     },
     {
+        question: "Who invented the World Wide Web?",
+        answer: "Tim Berners-Lee",
+        wrongAnswer: "Bill Gates"
+    },
+    {
         question: "What game introduced the character 'Aloy' in 2017?",
         answer: "Horizon Zero Dawn",
         wrongAnswer: "The Witcher 3"
@@ -54,8 +66,14 @@ let questions = [
         question: "What year was the first iPhone released?",
         answer: "2007",
         wrongAnswer: "2010"
+    },
+    {
+        question: "What was the first home video game console?",
+        answer: "Magnavox Odyssey",
+        wrongAnswer: "Atari 2600"
     }
 ];
+let currentQuestion = Math.floor(Math.random() * questions.length);
 
 document.addEventListener("DOMContentLoaded", function () {
     let startGameButton = document.getElementById('start-game');
