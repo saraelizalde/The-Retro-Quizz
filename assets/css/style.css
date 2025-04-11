@@ -121,12 +121,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20% 0;
+    padding: 10% 0;
     margin: auto;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     text-align: center;
+    scroll-padding-top: 20px;
+    scroll-margin-top: 30px;
 }
 
 #answers {
@@ -189,6 +191,8 @@ body{
     margin-top: 2rem;
     flex-direction: column;
     font-family: var(--primary-font);
+    scroll-padding-top: 20px;
+    scroll-margin-top: 30px;
 }
 
 .game-rules h2{
@@ -213,6 +217,8 @@ body{
     color: var(--neon-purple);
     width: 90%;
     margin: 2rem auto;
+    scroll-padding-top: 20px;
+    scroll-margin-top: 30px;
 }
 
 .about-us h2{
