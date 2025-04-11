@@ -162,6 +162,13 @@ body{
     font-size: medium;
 }
 
+#restart-button{
+    background-color: var(--bright-yellow);
+    color: var(--deep-black);
+    font-family: var(--primary-font);
+    font-size: xx-large;
+}
+
 
 
 

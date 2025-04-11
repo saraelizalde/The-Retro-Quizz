@@ -85,17 +85,27 @@ function startTheQuestions() {
     let container = document.getElementById("game-window");
     let containerAnswer = document.getElementById('answers');
 
-    // End condition
+    // End condition and restart button
     if (scoreValue >= 2) {
-        question.innerHTML = "Congratulation!<br><br>You are the ultimate Geek!";
-        question.style.fontSize = "1.5rem"; 
+        question.innerHTML = "Congratulation!<br><br>You are the ultimate Geek!<br><br>";
+        question.style.fontSize = "1.5rem";
         confetti({
             particleCount: 100,
             spread: 70,
             origin: { y: 0.6 }
-          });
+        });
+
+        const restartButton = document.createElement("button");
+        restartButton.textContent = "Restart";
+        restartButton.id = "restart-button";
+        question.appendChild(restartButton);
+
+        restartButton.addEventListener("click", () => {
+            scoreValue = 0;
+            startTheQuestions();
+        });
         return;
-    } 
+    }
 
     // Start questions again if none left in the array
     if (currentQuestion >= questions.length) {
