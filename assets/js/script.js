@@ -6,7 +6,7 @@ let questions = [
     { question: "Who is ?", answer: "..", wrongAnswer: 'no' },
     { question: "When is?", answer: "...", wrongAnswer: 'nah' },
     {
-        question: "What was the first Mario game?",
+        question: "What was Mario's first appearance in a game?",
         answer: "Donkey Kong",
         wrongAnswer: "Super Mario Bros."
     },
@@ -87,9 +87,15 @@ function startTheQuestions() {
 
     // End condition
     if (scoreValue >= 2) {
-        question.textContent = "You won";
+        question.innerHTML = "Congratulation!<br><br>You are the ultimate Geek!";
+        question.style.fontSize = "1.5rem"; 
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+          });
         return;
-    }
+    } 
 
     // Start questions again if none left in the array
     if (currentQuestion >= questions.length) {
