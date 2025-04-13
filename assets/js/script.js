@@ -106,7 +106,6 @@ function startTheQuestions() {
     // End condition and restart button
     if (scoreValue >= 2) {
         question.innerHTML = "Congratulation! <br><br> You are the ultimate Geek!<br><br>";
-        question.style.fontSize = "1rem";
         question.style.fontSize = "5vw";
         confetti({
             particleCount: 100,
@@ -121,6 +120,7 @@ function startTheQuestions() {
 
         restartButton.addEventListener("click", () => {
             scoreValue = 0;
+            question.style.fontSize = "1rem";
             startTheQuestions();
         });
         return;
