@@ -145,6 +145,15 @@ body{
     font-size: xx-large;
 }
 
+#answer-a:hover,
+#answer-b:hover{
+    border: 4px solid var(--neon-purple);
+}
+
+#start-game:hover{
+    border: 4px solid var(--hot-pink);
+}
+
 #question {
     margin-bottom: 4rem;
     color: var(--bright-yellow);
@@ -169,6 +178,10 @@ body{
     color: var(--deep-black);
     font-family: var(--primary-font);
     font-size: xx-large;
+}
+
+#restart-button:hover{
+    border: 4px solid var(--hot-pink);
 }
 
 
