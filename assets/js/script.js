@@ -120,6 +120,7 @@ function startTheQuestions() {
 
         restartButton.addEventListener("click", () => {
             scoreValue = 0;
+            scoreDisplay.textContent = scoreValue;
             question.style.fontSize = "1rem";
             startTheQuestions();
         });
