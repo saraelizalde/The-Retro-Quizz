@@ -1,6 +1,9 @@
 
 let scoreDisplay; // Declared globally before defining it in DOM
 let scoreValue = 0;
+let container;
+let containerAnswer;
+let startGameButton;
 let questions = [
     {
         question: "What was Mario's first appearance in a game?",
@@ -76,9 +79,11 @@ let questions = [
 let currentQuestion = Math.floor(Math.random() * questions.length);
 
 document.addEventListener("DOMContentLoaded", function () {
-    let startGameButton = document.getElementById('start-game');
+    startGameButton = document.getElementById('start-game');
     startGameButton.addEventListener("click", startTheQuizz);
     scoreDisplay = document.getElementById('score');
+    container = document.getElementById("game-window");
+    containerAnswer = document.getElementById('answers');
 });
 
 
@@ -90,15 +95,10 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function startTheQuizz() {
 
-    //Get the containers
-    let container = document.getElementById("game-window");
-    let containerAnswer = document.getElementById('answers');
-
     //Removes Start The quizz button and What do you know
     let whatDoYouKnow = document.getElementById('intro-question');
     container.removeChild(whatDoYouKnow);
-    let startButton = document.getElementById('start-game');
-    containerAnswer.removeChild(startButton);
+    containerAnswer.removeChild(startGameButton);
 
     startTheQuestions();
 }
@@ -109,10 +109,6 @@ function startTheQuizz() {
  * Randomize the position of the correct answer
  */
 function startTheQuestions() {
-
-    //Get the containers
-    let container = document.getElementById("game-window");
-    let containerAnswer = document.getElementById('answers');
 
     // Clear previous answers
     containerAnswer.innerHTML = "";
@@ -220,7 +216,6 @@ function endOfGame() {
  * Resets the score to 0
  */
 function restartGame() {
-    const containerAnswer = document.getElementById("answers");
     containerAnswer.innerHTML = "";
 
     const restartButton = document.createElement("button");
