@@ -1,5 +1,5 @@
 
-let scoreDisplay = document.getElementById('score');
+let scoreDisplay; // Declared globally before defining it in DOM
 let scoreValue = 0;
 let questions = [
     {
@@ -78,7 +78,9 @@ let currentQuestion = Math.floor(Math.random() * questions.length);
 document.addEventListener("DOMContentLoaded", function () {
     let startGameButton = document.getElementById('start-game');
     startGameButton.addEventListener("click", startTheQuizz);
+    scoreDisplay = document.getElementById('score');
 });
+
 
 
 
