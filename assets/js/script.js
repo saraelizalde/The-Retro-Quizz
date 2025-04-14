@@ -82,7 +82,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+/**
+ * Called when start the quizz button is clicked
+ * Clears the game-window for the quiz to come
+ */
 function startTheQuizz() {
+
     //Get the containers
     let container = document.getElementById("game-window");
     let containerAnswer = document.getElementById('answers');
@@ -97,42 +102,20 @@ function startTheQuizz() {
 }
 
 
+/**
+ * Make the questions and answers appear
+ * Randomize the position of the correct answer
+ */
 function startTheQuestions() {
 
     //Get the containers
     let container = document.getElementById("game-window");
     let containerAnswer = document.getElementById('answers');
 
-    // End condition and restart button
-    if (scoreValue >= 2) {
-        question.innerHTML = "Congratulation! <br><br> You are the ultimate Geek!<br><br>";
-        question.style.fontSize = "5vw";
-        confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { y: 0.6 }
-        });
+    // Clear previous answers
+    containerAnswer.innerHTML = "";
 
-        const restartButton = document.createElement("button");
-        restartButton.textContent = "Restart";
-        restartButton.id = "restart-button";
-        question.appendChild(restartButton);
-
-        restartButton.addEventListener("click", () => {
-            scoreValue = 0;
-            scoreDisplay.textContent = scoreValue;
-            question.style.fontSize = "1rem";
-            startTheQuestions();
-        });
-        return;
-    }
-
-    // Start questions again if none left in the array
-    if (currentQuestion >= questions.length) {
-        currentQuestion = 0;
-    }
-
-    //Shows first question
+    //Shows question
     let questionElement = document.getElementById("question");
     questionElement.textContent = questions[currentQuestion].question;
 
@@ -160,32 +143,115 @@ function startTheQuestions() {
         buttonB.textContent = questions[currentQuestion].answer;
     }
 
-    //Check if you picked the correct answer
-    function handleAnswerClick(e) {
-        let selected = e.target.textContent;
-        let correct = questions[currentQuestion].answer;
-        if (selected === correct) {
-            scoreValue += 1;
-            //alert("Correct!");
-        } else {
-            scoreValue = 0;
-            alert("Wrong! Score reset to 0");
-        }
-
-        //Add 1 to the score display
-        scoreDisplay.textContent = scoreValue;
-
-        //Next question, remove buttons to start function again
-        currentQuestion++;
-        containerAnswer.removeChild(buttonA);
-        containerAnswer.removeChild(buttonB);
-
-        //Starts function again
-        startTheQuestions();
-    }
-
-    //Event Listeners
+    //Event Listener
     buttonA.addEventListener("click", handleAnswerClick);
     buttonB.addEventListener("click", handleAnswerClick);
-
 }
+
+
+
+/**
+ * Checks if the correct answer is clicked
+ * Adds 1 to score or reset to 0
+ */
+function handleAnswerClick(e) {
+
+    let selected = e.target.textContent;
+    let correct = questions[currentQuestion].answer;
+    if (selected === correct) {
+        scoreValue += 1;
+        //alert("Correct!");
+    } else {
+        scoreValue = 0;
+        alert("Wrong! Score reset to 0");
+    }
+    //Add 1 to the score display
+    scoreDisplay.textContent = scoreValue;
+
+    nextQuestion();
+}
+
+
+
+/**
+ * Keep the questions comming
+ * Starts the array again if no more questions
+ * Checks score every time
+ */
+function nextQuestion() {
+    currentQuestion++;
+    if (currentQuestion >= questions.length) {
+        currentQuestion = 0;
+    }
+
+    if (scoreValue >= 2) {
+        endOfGame();
+    } else {
+        startTheQuestions();
+    }
+}
+
+
+
+
+/**
+ * End condition (temporary)
+ * Confetti annimation
+ */
+function endOfGame() {
+    if (scoreValue >= 2) {
+        question.innerHTML = "Congratulation! <br><br> You are the ultimate Geek!<br><br>";
+        question.style.fontSize = "5vw";
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+    }
+
+    restartGame();
+}
+
+
+/**
+ * Restart the quizz
+ * Resets the score to 0
+ */
+function restartGame() {
+    const containerAnswer = document.getElementById("answers");
+    containerAnswer.innerHTML = "";
+
+    const restartButton = document.createElement("button");
+    restartButton.textContent = "Restart";
+    restartButton.id = "restart-button";
+    question.appendChild(restartButton);
+
+    restartButton.addEventListener("click", () => {
+        scoreValue = 0;
+        scoreDisplay.textContent = scoreValue;
+        question.style.fontSize = "1rem";
+        startTheQuestions();
+    });
+
+    return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
