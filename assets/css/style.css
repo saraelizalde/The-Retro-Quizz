@@ -145,9 +145,18 @@ body{
     font-size: xx-large;
 }
 
+#answer-a,
+#answer-b{
+    border: 4px solid var(--deep-black);
+}
+
 #answer-a:hover,
 #answer-b:hover{
     border: 4px solid var(--neon-purple);
+}
+
+#start-game{
+    border: 4px solid var(--deep-black);
 }
 
 #start-game:hover{
