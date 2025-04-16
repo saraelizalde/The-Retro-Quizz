@@ -156,13 +156,25 @@ function handleAnswerClick(e) {
 
     let selected = e.target.textContent;
     let correct = questions[currentQuestion].answer;
+
+    // removes feedback message 
+    let existingMessage = document.getElementById('feedback-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+
     if (selected === correct) {
         scoreValue += 1;
-        //alert("Correct!");
+        //alert("Correct!");   
     } else {
         scoreValue = 0;
-        alert("Wrong! Score reset to 0");
+        //alert("Wrong! Score reset to 0");  
+        let feedbackMessage = document.createElement('div');
+        feedbackMessage.id = 'feedback-message';
+        feedbackMessage.textContent = "Wrong! Score reset to 0";
+        container.appendChild(feedbackMessage);
     }
+
     //Add 1 to the score display
     scoreDisplay.textContent = scoreValue;
 
