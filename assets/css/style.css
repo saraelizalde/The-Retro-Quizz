@@ -167,6 +167,14 @@ body{
     margin-bottom: 4rem;
     color: var(--bright-yellow);
     font-family: var(--secondary-font);
+    font-size: large;
+}
+
+#feedback-message{
+    font-family: var(--secondary-font);
+    padding-top: 2rem;
+    font-size: medium;
+    color : var(--hot-pink);
 }
 
 .score-area {
