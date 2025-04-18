@@ -4,13 +4,26 @@ let scoreValue = 0;
 let container;
 let containerAnswer;
 let startGameButton;
+let questions = [];
+let currentQuestion;
 
 //Fetch the array of questions and answers
-fetch('../data/questions.json')
-  .then(res => res.json())
-  .then(data => );
+fetch('assets/data/questions.json')
+  .then(res => {
+    console.log("Fetch response:", res);
+    return res.json();
+  })
+  .then(data => {
+    questions = data;
+    console.log('Fetched questions:', questions);
 
-let currentQuestion = Math.floor(Math.random() * questions.length);
+    // Randomize question
+    currentQuestion = Math.floor(Math.random() * questions.length);
+    console.log('Random question index:', currentQuestion);
+  })
+  .catch(error => {
+    console.error('Error fetching questions:', error);
+  });
 
 document.addEventListener("DOMContentLoaded", function () {
     startGameButton = document.getElementById('start-game');
