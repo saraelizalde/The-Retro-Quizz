@@ -4,78 +4,12 @@ let scoreValue = 0;
 let container;
 let containerAnswer;
 let startGameButton;
-let questions = [
-    {
-        question: "What was Mario's first appearance in a game?",
-        answer: "Donkey Kong",
-        wrongAnswer: "Super Mario Bros."
-    },
-    {
-        question: "Who designed the world of 'Elden Ring'?",
-        answer: "George R.R. Martin",
-        wrongAnswer: "Hidetaka Miyazaki"
-    },
-    {
-        question: "Who developed Pac-Man?",
-        answer: "Namco",
-        wrongAnswer: "Atari"
-    },
-    {
-        question: "What year was the Xbox 360 released?",
-        answer: "2005",
-        wrongAnswer: "2006"
-    },
-    {
-        question: "What game won the title of 'Game of the Year' at The Game Awards 2010?",
-        answer: "Red Dead Redemption",
-        wrongAnswer: "Halo: Reach"
-    },
-    {
-        question: "Which company originally manufactured the Game Boy?",
-        answer: "Nintendo",
-        wrongAnswer: "Sega"
-    },
-    {
-        question: "What year was the first video game console released?",
-        answer: "1972",
-        wrongAnswer: "1980"
-    },
-    {
-        question: "What year did 'The Last of Us' first release?",
-        answer: "2013",
-        wrongAnswer: "2015"
-    },
-    {
-        question: "What programming language was created by Dennis Ritchie?",
-        answer: "C",
-        wrongAnswer: "Python"
-    },
-    {
-        question: "Who invented the World Wide Web?",
-        answer: "Tim Berners-Lee",
-        wrongAnswer: "Bill Gates"
-    },
-    {
-        question: "What game introduced the character 'Aloy' in 2017?",
-        answer: "Horizon Zero Dawn",
-        wrongAnswer: "The Witcher 3"
-    },
-    {
-        question: "Who is known as the father of modern computing?",
-        answer: "Alan Turing",
-        wrongAnswer: "Charles Babbage"
-    },
-    {
-        question: "What year was the first iPhone released?",
-        answer: "2007",
-        wrongAnswer: "2010"
-    },
-    {
-        question: "What was the first home video game console?",
-        answer: "Magnavox Odyssey",
-        wrongAnswer: "Atari 2600"
-    }
-];
+
+//Fetch the array of questions and answers
+fetch('../data/questions.json')
+  .then(res => res.json())
+  .then(data => );
+
 let currentQuestion = Math.floor(Math.random() * questions.length);
 
 document.addEventListener("DOMContentLoaded", function () {
