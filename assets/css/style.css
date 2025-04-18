@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 
+
 /*CSS Variables*/
 
 :root{
@@ -96,10 +97,12 @@ body{
     text-decoration: none;
     color: black;
     font-size: x-large ;
+    font-weight: normal;
+    transition: font-weight 0.2s ;
 }
 
 .nav-links a:hover {
-    font-weight: bold;
+    font-weight: bold; 
 }
 
 
