@@ -6,6 +6,8 @@
 
 The goal is not just to test knowledge but to **bring together people with shared interests** and form a vibrant community. Social media links help users to stay connected, and future updates will include chat rooms, and events.
 
+![Mockup of The Retro Quizz on devices](assets/images/mockup-retro-quizz.png)
+
 ## Business Goal :
 
 The primary goal of The Retro Quizz is to **build a community of retro tech and video game lovers**.<br><br> 
@@ -41,9 +43,9 @@ To achieve this, we aim to:
 ## Performance & Validation :
 
  - Lighthouse Performance Results: (to be added)
-- CSS Validation: (to be added)
-- HTML Validation: (to be added)
-- JavaScript Validation: (to be added)
+- [Pass the CSS Validation: W3C validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsaraelizalde.github.io%2FThe-Retro-Quizz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr)
+- [Pass the HTML Validation: W3C validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsaraelizalde.github.io%2FThe-Retro-Quizz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr)
+- Pass the JavaScript Validation: [JSHint](https://jshint.com/) with no significant issues
 
 ## Futur features :
 
@@ -60,8 +62,8 @@ To achieve this, we aim to:
 
 ## Deployment :
 
-- <a href="https://saraelizalde.github.io/The-Retro-Quizz/" target="_blank">Live Website URL : https://saraelizalde.github.io/The-Retro-Quizz/</a>
-- <a href="https://github.com/saraelizalde/The-Retro-Quizz.git" target="_blank">Repository Clone Link: https://github.com/saraelizalde/The-Retro-Quizz.git</a>
+- [Live Website URL](https://saraelizalde.github.io/The-Retro-Quizz/)
+- [Repository Clone Link](https://github.com/saraelizalde/The-Retro-Quizz.git)
 
 ## Development Process :
 - I created a wireframe on paper to have a clear idea of what structure to build.
