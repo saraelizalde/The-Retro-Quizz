@@ -28,11 +28,20 @@ To achieve this, we aim to:
 
 ## Features :
 
-- **Start Screen** : Fullscreen (for horizontal screens) retro-style welcome screen with a central button and a Pac-Man-inspired background. To remind of a video game welcome screen. 
+- **Start Screen** : A full-screen, retro-style welcome screen (optimized for horizontal screens) featuring a central start button. When clicked, it smoothly scrolls to the game window. The background is inspired by Pac-Man, evoking the look and feel of a classic video game start screen.
+![Start screen image](assets/images/start-screen.png)
 
 - **Navigation Bar** : To facilitate navigation throughout the page thanks to links to key sections : Game Window, Rules, About Us, and Contact. 
+![Navigation bar](assets/images/nav-bar.png)
 
-- **Game Window** : The interactive quiz begins here when users click a "Start the Quizz" button. 
+- **Game Window** : The interactive quiz begins here when users click the "Start the Quiz" button.
+![Game window before the button is pressed](assets/images/game-window-before-start.png)
+ Each question appears with two answer options, represented by buttons that include hover effects. 
+ ![Game window during the quiz](assets/images/game-window-during-quiz.png)
+ A correct answer adds 1 point to the score area. 
+ ![The score area](assets/images/score-area.png)
+ After 10 correct answers, the screen displays a congratulatory message, a confetti animation, and a restart button that resets the game when clicked.
+ ![The congratulations message and the confetti annimation](assets/images/game-window-congratulations.png)
 
 - **Rules Section** : Simple game instructions with a motivational message to get users excited. 
 
