@@ -9,7 +9,7 @@
 :root{
     --hot-pink: #FF41B4;
     --electric-blue: #3A58FF;
-    --neon-purple: #A309DC;
+    --neon-purple: #cf69ff;
     --bright-yellow: #FFEB3B;
     --deep-black: #000000;
     --light-black: #212121;
@@ -127,7 +127,6 @@ body{
     padding: 10% 0;
     margin: auto;
     margin-top: 2rem;
-    display: flex;
     flex-direction: column;
     text-align: center;
     scroll-padding-top: 20px;
@@ -135,8 +134,7 @@ body{
 }
 
 #answers {
-    display: grid;
-    flex-wrap: wrap;
+    display: grid;   
     gap: 30px;
     justify-content: center;
 }
