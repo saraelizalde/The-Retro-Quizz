@@ -157,7 +157,7 @@ function nextQuestion() {
  */
 function endOfGame() {
     if (scoreValue >= 2) {
-        question.innerHTML = "Congratulation! <br><br> You are the ultimate Geek!<br><br>";
+        question.innerHTML = "Congratulations! <br><br> You are the ultimate Geek!<br><br>";
         question.style.fontSize = "5vw";
         confetti({
             particleCount: 100,
