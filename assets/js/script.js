@@ -6,6 +6,7 @@ let containerAnswer;
 let startGameButton;
 let questions = [];
 let currentQuestion;
+let question;
 
 //Fetch the array of questions and answers
 fetch('assets/data/questions.json')
@@ -27,10 +28,11 @@ fetch('assets/data/questions.json')
 
 document.addEventListener("DOMContentLoaded", function () {
     startGameButton = document.getElementById('start-game');
-    startGameButton.addEventListener("click", startTheQuizz);
+    startGameButton.addEventListener("click", startTheQuiz);
     scoreDisplay = document.getElementById('score');
     container = document.getElementById("game-window");
     containerAnswer = document.getElementById('answers');
+    question = document.getElementById("question");
 });
 
 
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * Called when start the quizz button is clicked
  * Clears the game-window for the quiz to come
  */
-function startTheQuizz() {
+function startTheQuiz() {
 
     //Removes Start The quizz button and What do you know
     let whatDoYouKnow = document.getElementById('intro-question');
@@ -75,7 +77,7 @@ function startTheQuestions() {
     let buttonB = document.createElement('button');
     buttonB.textContent = questions[currentQuestion].wrongAnswer;
     buttonB.id = "answer-b";
-    buttonA.setAttribute("data-type", "AnswerB");
+    buttonB.setAttribute("data-type", "AnswerB");
     containerAnswer.appendChild(buttonB);
 
     // Changes the correct answer position randomly
