@@ -8,7 +8,7 @@
 
 :root{
     --hot-pink: #FF41B4;
-    --electric-blue: #3A58FF;
+    --electric-blue: #7A8EFF;
     --neon-purple: #cf69ff;
     --bright-yellow: #FFEB3B;
     --deep-black: #000000;
@@ -41,7 +41,7 @@ body{
 /* Start the Quizz area */
 
 .start-area {
-    background-image: url(../images/retro-menu.png);
+    background-image: url(../images/retro-menu.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: repeat;
@@ -293,6 +293,8 @@ footer p, a{
 footer a{
     color: var(--deep-black);
     text-decoration: none;
+    margin-bottom: 0.6rem;
+    display: inline-block;
 }
 
 footer a:hover{
