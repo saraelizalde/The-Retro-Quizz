@@ -10,29 +10,33 @@ let question;
 
 //Fetch the array of questions and answers
 fetch('assets/data/questions.json')
-  .then(res => {
-    console.log("Fetch response:", res);
-    return res.json();
-  })
-  .then(data => {
-    questions = data;
-    console.log('Fetched questions:', questions);
+    .then(res => {
+        console.log("Fetch response:", res);
+        return res.json();
+    })
+    .then(data => {
+        questions = data;
+        console.log('Fetched questions:', questions);
 
-    // Randomize question
-    currentQuestion = Math.floor(Math.random() * questions.length);
-    console.log('Random question index:', currentQuestion);
-  })
-  .catch(error => {
-    console.error('Error fetching questions:', error);
-  });
+        // Randomize question
+        currentQuestion = Math.floor(Math.random() * questions.length);
+        console.log('Random question index:', currentQuestion);
+    })
+    .catch(error => {
+        console.error('Error fetching questions:', error);
+    });
 
 document.addEventListener("DOMContentLoaded", function () {
+
     startGameButton = document.getElementById('start-game');
     startGameButton.addEventListener("click", startTheQuiz);
     scoreDisplay = document.getElementById('score');
     container = document.getElementById("game-window");
     containerAnswer = document.getElementById('answers');
     question = document.getElementById("question");
+    document.getElementById("start-button").addEventListener("click", () => {
+        container.scrollIntoView({ behavior: "smooth" });
+    });
 });
 
 

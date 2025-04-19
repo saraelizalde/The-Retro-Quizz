@@ -1,4 +1,3 @@
-
 /*Google fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
@@ -6,7 +5,7 @@
 
 /*CSS Variables*/
 
-:root{
+:root {
     --hot-pink: #FF41B4;
     --electric-blue: #7A8EFF;
     --neon-purple: #cf69ff;
@@ -22,14 +21,19 @@
 
 /*Global styling*/
 
-h1, h2{
-    text-align:center;
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+    text-align: center;
     font-family: var(--secondary-font);
 }
 
-body{
+body {
     background-color: var(--light-black);
-    font-size:large;
+    font-size: large;
 }
 
 
@@ -57,7 +61,7 @@ body{
 
 #start-button {
     height: 3rem;
-    width:auto;
+    width: auto;
     font-family: var(--secondary-font);
     background-color: white;
     border: 4px solid var(--hot-pink);
@@ -96,13 +100,13 @@ body{
 .nav-links a {
     text-decoration: none;
     color: black;
-    font-size: x-large ;
+    font-size: x-large;
     font-weight: normal;
-    transition: font-weight 0.2s ;
+    transition: font-weight 0.2s;
 }
 
 .nav-links a:hover {
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 
@@ -112,7 +116,7 @@ body{
 
 /*Game Area*/
 
-.game-area h1{
+.game-area h1 {
     color: var(--hot-pink);
 }
 
@@ -134,12 +138,12 @@ body{
 }
 
 #answers {
-    display: grid;   
+    display: grid;
     gap: 30px;
     justify-content: center;
 }
 
-#answers button{
+#answers button {
     background-color: var(--bright-yellow);
     color: var(--deep-black);
     font-family: var(--primary-font);
@@ -147,20 +151,20 @@ body{
 }
 
 #answer-a,
-#answer-b{
+#answer-b {
     border: 4px solid var(--deep-black);
 }
 
 #answer-a:hover,
-#answer-b:hover{
+#answer-b:hover {
     border: 4px solid var(--neon-purple);
 }
 
-#start-game{
+#start-game {
     border: 4px solid var(--deep-black);
 }
 
-#start-game:hover{
+#start-game:hover {
     border: 4px solid var(--hot-pink);
 }
 
@@ -171,11 +175,11 @@ body{
     font-size: large;
 }
 
-#feedback-message{
+#feedback-message {
     font-family: var(--secondary-font);
     padding-top: 2rem;
     font-size: medium;
-    color : var(--hot-pink);
+    color: var(--hot-pink);
 }
 
 .score-area {
@@ -191,14 +195,14 @@ body{
     font-size: medium;
 }
 
-#restart-button{
+#restart-button {
     background-color: var(--bright-yellow);
     color: var(--deep-black);
     font-family: var(--primary-font);
     font-size: xx-large;
 }
 
-#restart-button:hover{
+#restart-button:hover {
     border: 4px solid var(--hot-pink);
 }
 
@@ -226,7 +230,7 @@ body{
     scroll-margin-top: 30px;
 }
 
-.game-rules h2{
+.game-rules h2 {
     margin-bottom: 0;
 }
 
@@ -243,8 +247,8 @@ body{
 
 
 /*About us*/
-.about-us{
-    background-color:var(--deep-black);
+.about-us {
+    background-color: var(--deep-black);
     color: var(--neon-purple);
     width: 90%;
     margin: 2rem auto;
@@ -252,11 +256,11 @@ body{
     scroll-margin-top: 30px;
 }
 
-.about-us h2{
+.about-us h2 {
     padding: 1rem 0 0;
 }
 
-.about-us p{
+.about-us p {
     text-align: center;
     padding: 0 2rem 2rem;
     font-family: var(--primary-font);
@@ -277,27 +281,29 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    padding: 1rem 0; 
+    padding: 1rem 0;
 }
 
-footer .contact-us, footer .follow-us {
-    text-align: center; 
+footer .contact-us,
+footer .follow-us {
+    text-align: center;
     padding: 1rem;
-    width: 45%; 
+    width: 45%;
 }
 
-footer p, a{
+footer p,
+a {
     font-family: var(--primary-font);
 }
 
-footer a{
+footer a {
     color: var(--deep-black);
     text-decoration: none;
     margin-bottom: 0.6rem;
     display: inline-block;
 }
 
-footer a:hover{
+footer a:hover {
     color: var(--deep-black);
     font-weight: bold;
 }
@@ -316,34 +322,29 @@ footer a:hover{
         justify-content: center;
     }
 
-    footer .contact-us, footer .follow-us {
+    footer .contact-us,
+    footer .follow-us {
         width: 100%;
     }
 }
 
 /* Media Query <= 670px Navbar*/
 @media (max-width: 670px) {
-    .nav-links a{
-        font-size: medium ;
+    .nav-links a {
+        font-size: medium;
     }
 }
 
 /* Media Query <= 550px Navbar*/
 @media (max-width: 550px) {
-    .nav-links a{
+    .nav-links a {
         font-size: small;
     }
 }
 
 /* Media Query <= 350px Navbar*/
 @media (max-width: 350px) {
-    .nav-links a{
+    .nav-links a {
         font-size: x-small;
     }
 }
-
-
-
-
-
-
