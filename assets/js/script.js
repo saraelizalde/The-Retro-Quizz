@@ -1,3 +1,6 @@
+// Enable ES6 support in JSHint to allow let, const, and other modern syntax
+/*jshint esversion: 6 */
+
 let scoreDisplay;
 let scoreValue = 0;
 let container;
