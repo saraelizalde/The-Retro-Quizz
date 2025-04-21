@@ -118,12 +118,13 @@ function handleAnswerClick(e) {
         let feedbackMessage = document.createElement('div');
         feedbackMessage.id = 'feedback-message';
         feedbackMessage.textContent = "Wrong! Score reset to 0";
+        feedbackMessage.style.fontSize = "1.8rem";
         container.appendChild(feedbackMessage);
     }
 
     //Add 1 to the score display
     scoreDisplay.textContent = scoreValue;
-    
+
     nextQuestion();
 }
 
