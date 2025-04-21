@@ -11,19 +11,14 @@ let question;
 //Fetch the array of questions and answers
 fetch('assets/data/questions.json')
     .then(res => {
-        console.log("Fetch response:", res);
         return res.json();
     })
     .then(data => {
         questions = data;
-        console.log('Fetched questions:', questions);
-
         // Randomize question
         currentQuestion = Math.floor(Math.random() * questions.length);
-        console.log('Random question index:', currentQuestion);
     })
     .catch(error => {
-        console.error('Error fetching questions:', error);
     });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -117,11 +112,9 @@ function handleAnswerClick(e) {
     }
 
     if (selected === correct) {
-        scoreValue += 1;
-        //alert("Correct!");   
+        scoreValue += 1;  
     } else {
-        scoreValue = 0;
-        //alert("Wrong! Score reset to 0");  
+        scoreValue = 0;  
         let feedbackMessage = document.createElement('div');
         feedbackMessage.id = 'feedback-message';
         feedbackMessage.textContent = "Wrong! Score reset to 0";
@@ -130,7 +123,7 @@ function handleAnswerClick(e) {
 
     //Add 1 to the score display
     scoreDisplay.textContent = scoreValue;
-
+    
     nextQuestion();
 }
 
