@@ -130,7 +130,7 @@ function nextQuestion() {
         currentQuestion = 0;
     }
 
-    if (scoreValue >= 2) {
+    if (scoreValue >= 10) {
         endOfGame();
     } else {
         startTheQuestions();
@@ -142,7 +142,7 @@ function nextQuestion() {
  * Triggers confetti animation and shows a winning message
  */
 function endOfGame() {
-    if (scoreValue >= 2) {
+    if (scoreValue >= 10) {
         question.innerHTML = "Congratulations! <br><br> You are the ultimate Geek!<br><br>";
         question.style.fontSize = "5vw";
         confetti({
