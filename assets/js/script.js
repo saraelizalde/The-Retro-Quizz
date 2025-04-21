@@ -1,5 +1,4 @@
-
-let scoreDisplay; // Declared globally before defining it in DOM
+let scoreDisplay;
 let scoreValue = 0;
 let container;
 let containerAnswer;
@@ -22,7 +21,6 @@ fetch('assets/data/questions.json')
     });
 
 document.addEventListener("DOMContentLoaded", function () {
-
     startGameButton = document.getElementById('start-game');
     startGameButton.addEventListener("click", startTheQuiz);
     scoreDisplay = document.getElementById('score');
@@ -34,34 +32,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
-
 /**
- * Called when start the quizz button is clicked
+ * Called when start the quizz button is clicked,
  * Clears the game-window for the quiz to come
  */
 function startTheQuiz() {
-
-    //Removes Start The quizz button and What do you know
     let whatDoYouKnow = document.getElementById('intro-question');
     container.removeChild(whatDoYouKnow);
     containerAnswer.removeChild(startGameButton);
-
     startTheQuestions();
 }
 
-
 /**
- * Make the questions and answers appear
+ * Make the questions and answers appear,
  * Randomize the position of the correct answer
  */
 function startTheQuestions() {
-
     // Clear previous answers
     containerAnswer.innerHTML = "";
 
-    //Shows question
+    //Shows questions
     let questionElement = document.getElementById("question");
     questionElement.textContent = questions[currentQuestion].question;
 
@@ -94,27 +84,25 @@ function startTheQuestions() {
     buttonB.addEventListener("click", handleAnswerClick);
 }
 
-
-
 /**
- * Checks if the correct answer is clicked
+ * Checks if the correct answer is clicked,
  * Adds 1 to score or reset to 0
  */
 function handleAnswerClick(e) {
-
     let selected = e.target.textContent;
     let correct = questions[currentQuestion].answer;
 
-    // removes feedback message 
+    // Removes feedback message 
     let existingMessage = document.getElementById('feedback-message');
     if (existingMessage) {
         existingMessage.remove();
     }
 
+    //Adds 1 to scoreValue or reset to 0
     if (selected === correct) {
-        scoreValue += 1;  
+        scoreValue += 1;
     } else {
-        scoreValue = 0;  
+        scoreValue = 0;
         let feedbackMessage = document.createElement('div');
         feedbackMessage.id = 'feedback-message';
         feedbackMessage.textContent = "Wrong! Score reset to 0";
@@ -128,12 +116,10 @@ function handleAnswerClick(e) {
     nextQuestion();
 }
 
-
-
 /**
- * Keep the questions comming
- * Starts the array again if no more questions
- * Checks score every time
+ * Keep the questions comming,
+ * Resets the question index if we've reached the end of the array,
+ * Checks the score each time and ends the game if the score is high enough
  */
 function nextQuestion() {
     currentQuestion++;
@@ -148,12 +134,9 @@ function nextQuestion() {
     }
 }
 
-
-
-
 /**
- * End condition (temporary)
- * Confetti annimation
+ * End condition,
+ * Triggers confetti animation and shows a winning message
  */
 function endOfGame() {
     if (scoreValue >= 2) {
@@ -169,19 +152,16 @@ function endOfGame() {
     restartGame();
 }
 
-
 /**
- * Restart the quizz
+ * Restart the quizz,
  * Resets the score to 0
  */
 function restartGame() {
     containerAnswer.innerHTML = "";
-
     const restartButton = document.createElement("button");
     restartButton.textContent = "Restart";
     restartButton.id = "restart-button";
     question.appendChild(restartButton);
-
     restartButton.addEventListener("click", () => {
         scoreValue = 0;
         scoreDisplay.textContent = scoreValue;
@@ -191,23 +171,3 @@ function restartGame() {
 
     return;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
