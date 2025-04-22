@@ -56,7 +56,8 @@ To achieve this, we aim to:
 
 ## Testing :
 
- - Lighthouse Performance Results:
+- I tested playing this game in different browsers: Chrome, Safari, 
+- Lighthouse Performance Results:
  ![Lighthouse results](assets/images/lighthouse-results.png)
 - [Pass the CSS Validation: W3C validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsaraelizalde.github.io%2FThe-Retro-Quizz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr)
 - [Pass the HTML Validation: W3C validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsaraelizalde.github.io%2FThe-Retro-Quizz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr)
@@ -69,6 +70,10 @@ The one undefined variable, confetti, is defined in another script included in i
 ![Website on different screen sizes](assets/images/responsive3.png)
 ![Website on different screen sizes](assets/images/responsive4.png)
 ![Website on different screen sizes](assets/images/responsive5.png)
+
+## Unfixed Bugs :
+
+No unfixed bugs.
 
 ## Futur features :
 

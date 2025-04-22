@@ -69,5 +69,20 @@
       "question": "What was the first home video game console?",
       "answer": "Magnavox Odyssey",
       "wrongAnswer": "Atari 2600"
+    },
+    {
+      "question": "What was the name of the first commercially successful arcade video game?",
+      "answer": "Pong",
+      "wrongAnswer": "Space Invaders"
+    },
+    {
+      "question": "Who created the Linux operating system?",
+      "answer": "Linus Torvalds",
+      "wrongAnswer": "Richard Stallman"
+    },
+    {
+      "question": "Which game engine powers games like Fortnite and Gears of War?",
+      "answer": "Unreal Engine",
+      "wrongAnswer": "Unity"
     }
   ]
